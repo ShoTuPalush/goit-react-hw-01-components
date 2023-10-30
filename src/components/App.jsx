@@ -4,7 +4,9 @@ import { Statistics } from './Statistic/Statistic';
 import user from '../data/user.json';
 import statistic from '../data/data.json';
 import friends from '../data/friends.json';
+import transactions from '../data/transactions.json';
 import { FriendsList } from './Friends/FriendsList';
+import { Transactions } from './Transactions/Transactions';
 
 export const App = () => {
   return (
@@ -16,11 +18,9 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-
       <Statistics title="Upload stats" stats={statistic} />
-
       <FriendsList friends={friends} />
-
+      <Transactions items={transactions} />
       <GlobalStyle />
     </div>
   );

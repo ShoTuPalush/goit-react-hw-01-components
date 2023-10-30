@@ -29,15 +29,17 @@ export const Profile = ({
       <StatList>
         <StatItem>
           <Label>Followers</Label>
-          <Quantity>{followers}</Quantity>
+          <Quantity>
+            {new Intl.NumberFormat('en-IN').format(followers)}
+          </Quantity>
         </StatItem>
         <StatItem>
           <Label>Views</Label>
-          <Quantity>{views}</Quantity>
+          <Quantity>{new Intl.NumberFormat('en-IN').format(views)}</Quantity>
         </StatItem>
         <StatItem>
           <Label>Likes</Label>
-          <Quantity>{likes}</Quantity>
+          <Quantity>{new Intl.NumberFormat('en-IN').format(likes)}</Quantity>
         </StatItem>
       </StatList>
     </Profiles>
